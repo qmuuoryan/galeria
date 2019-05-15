@@ -5,8 +5,7 @@ class Location(models.Model):
     location_name = models.CharField(max_length =30)
 
     def __str__(self):
-            return self.location
-
+            return self.location_name
 
 class Category(models.Model):
     category_name = models.CharField(max_length =30)
@@ -39,7 +38,7 @@ class Image(models.Model):
 
     def delete_image(self):
         self.delete()
-        
+
     @classmethod
     def get_image_by_id(cls, image_id):
         image = cls.objects.get(pk=id)
