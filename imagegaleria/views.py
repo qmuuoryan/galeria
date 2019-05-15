@@ -8,7 +8,7 @@ def welcome(request):
     locations=Location.objects.all()
     categorys=Category.objects.all()
     # images=Image.retrieve_all()
-    return render (request, 'welcome.html',{'locations':locations,'categorys':categorys,'images':images})
+    # return render (request, 'welcome.html',{'locations':locations,'categorys':categorys,'images':images})
 
 def app_location(request):
     locations=Location.objects.all()
