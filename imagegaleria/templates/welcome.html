@@ -1,3 +1,61 @@
-<h1> Welcome to  My Image gallery</h1>
+{% extends 'allimages/base.html' %}
+{% block content %}
 
+{% if images %} 
+{% comment %} <h3 style="font-family: 'Marck Script', cursive;font-size:80px;margin-top:-400px;">Welcome to My Image gallery</h3> {% endcomment %}
+<div class="image-gallery">  
+  <div class="big-image">           
+
+    <img id="image1" src="http://127.0.0.1:8000/media/images/acf-art-comes-first-strassengerecht-copy.jpg" />
+    <img id="image2" src="http://127.0.0.1:8000/media/images/harley-davidson-sportster-custom-2-625x417.jpg" />
+    <img id="image3" src="http://127.0.0.1:8000/media/images/milkyway.jpg" />
+    <img id="image4" src="http://127.0.0.1:8000/media/images/nature.jpg" />
+    <img id="image5" src="http://127.0.0.1:8000/media/images/0093fcaf0ea667dfd52494fee16a79aa--oxford-flats-flat-shoes.jpg" />
+    
+  </div>  
+  
+  
+  {% comment %} <span class="glyphicon glyphicon-chevron-left"></span> {% endcomment %}
+  {% comment %} <span class="glyphicon glyphicon-chevron-right"></span>  {% endcomment %}
+  <div class="thumbs">  
+  <ul>    
+    <li>
+      <a href="#image1"><img  src="http://127.0.0.1:8000/media/images/acf-art-comes-first-strassengerecht-copy.jpg" /></a>
+      </li>
+      <li>
+      <a href="#image2"><img  src="http://127.0.0.1:8000/media/images/harley-davidson-sportster-custom-2-625x417.jpg" /></a>
+    </li>
+    <li>
+       <a href="#image3"><img  src="http://127.0.0.1:8000/media/images/milkyway.jpg" /></a>
+    </li>
+    <li>
+       <a href="#image4"><img  src="http://127.0.0.1:8000/media/images/nature.jpg"  /></a>
+    </li>
+    <li>
+       <a href="#image5"><img  src="http://127.0.0.1:8000/media/images/0093fcaf0ea667dfd52494fee16a79aa--oxford-flats-flat-shoes.jpg" /></a>
+    </li>
+       
+  </ul>
+  </div>
+</div>  
+
+
+{% for image in images %}
+
+ <div class= 'item'>
+<a data-fancybox="images" href="{{image.photo.url}}" data-caption="{{ image.description }} &nbsp; 
+                        {{ image.location }} &nbsp; 
+                        {{image.photo.url}}">
+                        <img src="{{image.photo.url}}" id='image1'  class="img-responsive" alt="Image" style="height:400px; width:400px;" >
+                    </a>
+
+
+</div>
+{% endfor %}
+
+<h2 class="text-center"> {{ photo.title }} </h2>
+
+
+ {% endif %}
+{% endblock %} 
 

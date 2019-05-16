@@ -5,6 +5,12 @@
 <head>
   <meta charset="utf-8">
 
+
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    
+
   {% if title %}
   <title>Image Gallery - {{title}}</title>
   {% else %}
@@ -13,7 +19,10 @@
 
   {% block styles %}
     {% bootstrap_css %}
+    
     <link rel="stylesheet" href="{% static 'css/baseimagegaleria.css' %}">
+     <link href="https://fonts.googleapis.com/css?family=Marck+Script" rel="stylesheet">
+
   {% endblock %}
 
   
@@ -24,13 +33,16 @@
     {% include "navbar.html" %}
 
     {% block content %} 
-    <h1 id='welcome' class='text-center' >Welcome to My Image Gallery</h1> 
+    <h1 id ='welcome' class='text-center' >Welcome to My Image Gallery</h1> 
+
     {% endblock %}
 
     
     {% block scripts %}
+    {% bootstrap_javascript %}
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-     {% bootstrap_javascript %}
+
+     {% endblock %}
   
 </body>
 </html>
