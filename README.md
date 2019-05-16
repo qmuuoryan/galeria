@@ -11,7 +11,8 @@
 * View different photos. Click on a single photo to expand it and also view the details of the photo. The photo    details must appear on a modal within the same route as the main page. Search for different categories of photos. Copy a link to the photo to share with my friends. View photos based on the location they were taken.
 
 # Behaviour Driven Development
-* input	output click view details -|-	image details click link -|-	image details on a new page search image by category. 
+* input	-click view details
+* output-image details click link and	image details on a new page where you search image by category. 
 
 
 
