@@ -2,6 +2,7 @@ from django.test import TestCase
 from .models import Location,Category,Image
 
 # Create your tests here.
+
 # category test class
 class Category_test(TestCase):
     def setUp(self):
